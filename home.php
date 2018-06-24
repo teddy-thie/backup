@@ -9,7 +9,7 @@
     <meta name="author" content="Pharaohlab">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <!-- ========== Title ========== -->
-    <title> Cocoon -Portfolio</title>
+    <title> Banana Hill Art Gallery</title>
     <!-- ========== Favicon Ico ========== -->
     <!--<link rel="icon" href="fav.ico">-->
     <!-- ========== STYLESHEETS ========== -->
@@ -89,6 +89,11 @@
                             Contact
                         </a>
                     </li>
+                    <li>
+                        <a href="help.php">
+                            Help
+                        </a>
+                    </li>
                 </ul>
             </div>
             <!--main menu end -->
@@ -98,7 +103,7 @@
                 <div class="side_menu_bottom_inner">
                     <ul class="social_menu">
                         <li>
-                            <a href="https://plus.google.com/108819026650804640672/"> <i class="ion ion-social-pinterest"></i> </a>
+                            <a href="https://plus.google.com/108819026650804640672/"> <i class="ion ion-social-google"></i> </a>
                         </li>
                         <li>
                             <a href="https://www.facebook.com/BananaHillArtGalleryInNairobi"> <i class="ion ion-social-facebook"></i> </a>
@@ -123,6 +128,7 @@
         <div class="col-lg-10 col-md-9 col-12 body_block  align-content-center">
             <div class="portfolio">
                 <div class="container-fluid">
+                <h1>Welcome to Banana Hill Art Gallery</h1>
                     <!--=================== masaonry portfolio start====================-->
                     <div class="grid img-container justify-content-center no-gutters">
                         <div class="grid-sizer col-sm-12 col-md-6 col-lg-3"></div>
@@ -201,68 +207,49 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="grid-item   architecture design col-sm-12 col-md-6 col-lg-3">
-                            <a href="assets/img/portfolio/home-port6.png" title="project name 5">
-                                <div class="project_box_one">
-                                    <img src="assets/img/portfolio/home-port6.png" alt="pro1" />
-                                    <div class="product_info">
-                                        <div class="product_info_text">
-                                            <div class="product_info_text_inner">
-                                                <i class="ion ion-plus"></i>
-                                                <h4>project name</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="grid-item  photography architecture col-sm-12 col-md-6 col-lg-3">
-                            <a href="assets/img/portfolio/home-port7.png" title="project name 5">
-                                <div class="project_box_one">
-                                    <img src="assets/img/portfolio/home-port7.png" alt="pro1" />
-                                    <div class="product_info">
-                                        <div class="product_info_text">
-                                            <div class="product_info_text_inner">
-                                                <i class="ion ion-plus"></i>
-                                                <h4>project name</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="grid-item  branding design  col-sm-12 col-md-6 col-lg-3">
-                            <a href="assets/img/portfolio/home-port8.png" title="project name 5">
-                                <div class="project_box_one">
-                                    <img src="assets/img/portfolio/home-port8.png" alt="pro1" />
-                                    <div class="product_info">
-                                        <div class="product_info_text">
-                                            <div class="product_info_text_inner">
-                                                <i class="ion ion-plus"></i>
-                                                <h4>project name</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="grid-item architecture  col-sm-12 col-md-6 col-lg-6">
-                            <a href="assets/img/portfolio/home-port9.png" title="project name 4">
-                                <div class="project_box_one">
-                                    <img src="assets/img/portfolio/home-port9.png" alt="pro1" />
-                                    <div class="product_info">
-                                        <div class="product_info_text">
-                                            <div class="product_info_text_inner">
-                                                <i class="ion ion-plus"></i>
-                                                <h4>project name</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
+                        
                     </div>
                     <!--=================== masaonry portfolio end====================-->
+                    <br><br>
+                    <!--===================testimonial start====================-->
+                    <h3>Here is a little something from our partners</h3>
+                    <div class="testimonial_carousel mt50">
+
+<div class="testimonial_box">
+    
+    <p>
+    Alex Wainana is a self taught artist and has been doing sculptures for the last 12 years. Hooked up in art by Gallery Watatu former manager Ruth Schaffer, she encouraged him when she saw one of his first small metal sculpture. It was his turning point and since then, he has been growing into one of the best junk metal sculptor in the East African region.                                            </p>
+    <div class="testimonial_author">
+        <img src="assets/img/alex.png" alt="author">
+        <h5>Alex Wainana</h5>
+        <p>Founder <span>Banana Hill Art Gallery</span></p>
+    </div>
+</div>
+
+<div class="testimonial_box">
+    <p>
+    Andrew Kamondia wa Gathigi is a former farmer, sign writer and batik from Wangige whose first paintings were bought by Gallery Watatu’s Ruth Schaffner while he was still a farm Manager at Red Hill.                                            </p>
+    <div class="testimonial_author">
+        <img src="assets/img/alex.png" alt="author">
+        <h5>Andrew Kamondia</h5>
+        <p>Co-founder <span>Banana Hill Art Gallery</span></p>
+    </div>
+</div>
+
+<div class="testimonial_box">
+    <p>
+    I have been active in painting and have participated many group exhibitions both locally and internationally. Because of my love for art, I have always made an effort to spread the skills, and to make sure as many people as possible can enjoy either the creation-process or the end result of art.
+
+</p>
+    <div class="testimonial_author">
+        <img src="assets/img/rahab.png" alt="author">
+        <h5>Rahab Shine</h5>
+        <p>Project manager <span>Banana Hill Art Gallery</span></p>
+    </div>
+</div>
+</div>
+</div>
+<!--===================testimonial end====================-->
                 </div>
             </div>
         </div>

@@ -9,7 +9,7 @@
     <meta name="author" content="Pharaohlab">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <!-- ========== Title ========== -->
-    <title> Cocoon -Portfolio</title>
+    <title>Banana Hill Art Gallery</title>
     <!-- ========== Favicon Ico ========== -->
     <!--<link rel="icon" href="fav.ico">-->
     <!-- ========== STYLESHEETS ========== -->
@@ -89,6 +89,11 @@
                             Contact
                         </a>
                     </li>
+                    <li>
+                        <a href="help.php">
+                            Help
+                        </a>
+                    </li>
                 </ul>
             </div>
             <!--main menu end -->
@@ -98,7 +103,7 @@
                 <div class="side_menu_bottom_inner">
                     <ul class="social_menu">
                         <li>
-                            <a href="https://plus.google.com/108819026650804640672/"> <i class="ion ion-social-pinterest"></i> </a>
+                            <a href="https://plus.google.com/108819026650804640672/"> <i class="ion ion-social-google"></i> </a>
                         </li>
                         <li>
                             <a href="https://www.facebook.com/BananaHillArtGalleryInNairobi"> <i class="ion ion-social-facebook"></i> </a>
@@ -125,7 +130,7 @@
             <div class="portfolio gutters grid img-container">
                 <div class="grid-sizer col-sm-12 col-md-6 col-lg-3"></div>
                 <div class="grid-item branding  col-sm-12 col-md-6 col-lg-3">
-                    <a href="assets/img/portfolio/port1.png" title="project name 1">
+                    <a href="assets/img/portfolio/port1.png" title="Birds of steel">
                         <div class="project_box_one">
                             <img src="assets/img/portfolio/port1.png" alt="pro1" />
                             <div class="product_info">
@@ -140,7 +145,7 @@
                     </a>
                 </div>
                 <div class="grid-item  branding architecture  col-md-6 col-lg-3">
-                    <a href="assets/img/portfolio/port2.png" title="project name 2">
+                    <a href="assets/img/portfolio/port2.png" title="African Culture">
                         <div class="project_box_one">
                             <img src="assets/img/portfolio/port2.png" alt="pro1" />
                             <div class="product_info">
@@ -155,7 +160,7 @@
                     </a>
                 </div>
                 <div class="grid-item  design col-sm-12 col-md-6 col-lg-3">
-                    <a href="assets/img/portfolio/port3.png" title="project name 5">
+                    <a href="assets/img/portfolio/port3.png" title="Vintage golden ages">
                         <div class="project_box_one">
                             <img src="assets/img/portfolio/port3.png" alt="pro1" />
                             <div class="product_info">
@@ -170,7 +175,7 @@
                     </a>
                 </div>
                 <div class="grid-item  photography design col-sm-12 col-md-6 col-lg-3">
-                    <a href="assets/img/portfolio/port4.png" title="project name 5">
+                    <a href="assets/img/portfolio/port4.png" title="A mothers love">
                         <div class="project_box_one">
                             <img src="assets/img/portfolio/port4.png" alt="pro1" />
                             <div class="product_info">
@@ -185,7 +190,7 @@
                     </a>
                 </div>
                 <div class="grid-item  branding photography  col-sm-12 col-md-6 col-lg-3">
-                    <a href="assets/img/portfolio/port5.png" title="project name 5">
+                    <a href="assets/img/portfolio/port5.png" title="Buffalo Soldier">
                         <div class="project_box_one">
                             <img src="assets/img/portfolio/port5.png" alt="pro1" />
                             <div class="product_info">
@@ -200,7 +205,7 @@
                     </a>
                 </div>
                 <div class="grid-item   architecture design col-sm-12 col-md-6 col-lg-3">
-                    <a href="assets/img/portfolio/port6.png" title="project name 5">
+                    <a href="assets/img/portfolio/port6.png" title="Drums of Joy">
                         <div class="project_box_one">
                             <img src="assets/img/portfolio/port6.png" alt="pro1" />
                             <div class="product_info">
@@ -215,7 +220,7 @@
                     </a>
                 </div>
                 <div class="grid-item  photography architecture col-sm-12 col-md-6 col-lg-3">
-                    <a href="assets/img/portfolio/port7.png" title="project name 5">
+                    <a href="assets/img/portfolio/port7.png" title="African Beauty">
                         <div class="project_box_one">
                             <img src="assets/img/portfolio/port7.png" alt="pro1" />
                             <div class="product_info">
@@ -230,7 +235,7 @@
                     </a>
                 </div>
                 <div class="grid-item  branding design  col-sm-12 col-md-6 col-lg-3">
-                    <a href="assets/img/portfolio/port8.png" title="project name 5">
+                    <a href="assets/img/portfolio/port8.png" title="Flow of Life">
                         <div class="project_box_one">
                             <img src="assets/img/portfolio/port8.png" alt="pro1" />
                             <div class="product_info">
@@ -245,7 +250,7 @@
                     </a>
                 </div>
                 <div class="grid-item architecture  col-sm-12 col-md-6 col-lg-3">
-                    <a href="assets/img/portfolio/port9.png" title="project name 4">
+                    <a href="assets/img/portfolio/port9.png" title="Superwomen">
                         <div class="project_box_one">
                             <img src="assets/img/portfolio/port9.png" alt="pro1" />
                             <div class="product_info">
@@ -260,14 +265,14 @@
                     </a>
                 </div>
                 <div class="grid-item  photography architecture col-sm-12 col-md-6 col-lg-3">
-                    <a href="assets/img/portfolio/port10.png" title="project name 5">
+                    <a href="assets/img/portfolio/port10.png" title="Jaduong'">
                         <div class="project_box_one">
                             <img src="assets/img/portfolio/port10.png" alt="pro1" />
                             <div class="product_info">
                                 <div class="product_info_text">
                                     <div class="product_info_text_inner">
                                         <i class="ion ion-plus"></i>
-                                        <h4>Jadwong</h4>
+                                        <h4>Jaduong'</h4>
                                     </div>
                                 </div>
                             </div>
@@ -275,7 +280,7 @@
                     </a>
                 </div>
                 <div class="grid-item  branding design  col-sm-12 col-md-6 col-lg-3">
-                    <a href="assets/img/portfolio/port11.png" title="project name 5">
+                    <a href="assets/img/portfolio/port11.png" title="20/20 vision">
                         <div class="project_box_one">
                             <img src="assets/img/portfolio/port11.png" alt="pro1" />
                             <div class="product_info">
@@ -290,7 +295,7 @@
                     </a>
                 </div>
                 <div class="grid-item architecture  col-sm-12 col-md-6 col-lg-3">
-                    <a href="assets/img/portfolio/port4.png" title="project name 4">
+                    <a href="assets/img/portfolio/port4.png" title="Tunnel community">
                         <div class="project_box_one">
                             <img src="assets/img/portfolio/port4.png" alt="pro1" />
                             <div class="product_info">

@@ -9,7 +9,7 @@
     <meta name="author" content="Pharaohlab">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <!-- ========== Title ========== -->
-    <title> Cocoon -Portfolio</title>
+    <title> Banana Hill Art Gallery</title>
     <!-- ========== Favicon Ico ========== -->
     <!--<link rel="icon" href="fav.ico">-->
     <!-- ========== STYLESHEETS ========== -->
@@ -89,7 +89,13 @@
                             Contact
                         </a>
                     </li>
+                    <li>
+                        <a href="help.php">
+                            Help
+                        </a>
+                    </li>
                 </ul>
+                
             </div>
             <!--main menu end -->
 
@@ -98,7 +104,7 @@
                 <div class="side_menu_bottom_inner">
                     <ul class="social_menu">
                         <li>
-                            <a href="https://plus.google.com/108819026650804640672/"> <i class="ion ion-social-pinterest"></i> </a>
+                            <a href="https://plus.google.com/108819026650804640672/"> <i class="ion ion-social-google"></i> </a>
                         </li>
                         <li>
                             <a href="https://www.facebook.com/BananaHillArtGalleryInNairobi"> <i class="ion ion-social-facebook"></i> </a>

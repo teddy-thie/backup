@@ -9,7 +9,7 @@
     <meta name="author" content="Pharaohlab">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <!-- ========== Title ========== -->
-    <title> Cocoon -Portfolio</title>
+    <title> Banana Hill Art Gallery</title>
     <!-- ========== Favicon Ico ========== -->
     <!--<link rel="icon" href="fav.ico">-->
     <!-- ========== STYLESHEETS ========== -->
@@ -89,6 +89,11 @@
                             Contact
                         </a>
                     </li>
+                    <li>
+                        <a href="help.php">
+                            Help
+                        </a>
+                    </li>
                 </ul>
             </div>
             <!--main menu end -->
@@ -98,7 +103,7 @@
                 <div class="side_menu_bottom_inner">
                     <ul class="social_menu">
                         <li>
-                            <a href="https://plus.google.com/108819026650804640672/"> <i class="ion ion-social-pinterest"></i> </a>
+                            <a href="https://plus.google.com/108819026650804640672/"> <i class="ion ion-social-google"></i> </a>
                         </li>
                         <li>
                             <a href="https://www.facebook.com/BananaHillArtGalleryInNairobi"> <i class="ion ion-social-facebook"></i> </a>
@@ -119,27 +124,29 @@
         </div>
         <!--=================== side menu end====================-->
 
-        <!--=================== content body ====================-->
-        <div class="col-lg-10 col-md-9 col-12 body_block  align-content-center">
-            <div>
+       <!--=================== content body ====================-->
+       <div class="col-lg-10 col-md-9 col-12 body_block  align-content-center">
+        <div>
                 <div class="img_card">
                     <div class="row justify-content-center">
                         <div class="col-md-6 col-7 content_section">
                             <div class="content_box">
                                 <div class="content_box_inner">
                                     <div>
+                                        <h1 style="color=">
+                                       About Us
+                                        </h1>
                                         <h3>
-                                            Just a few words about us
+                                            Who are we?
                                         </h3>
                                         <p>
                                         Banana Hill Art Gallery is jointly owned by Rahab and Shine Tani, two well-known Kenyan visual artists in their own right. Rahab and Shine created a name for themselves in the early 1990s in and among the Kenyan art scene. Through extensive media exposure, other artists came to know of the couple, and contacted them for support so they too could break through.
                                         </p>
                                         <h3>
-                                            How we became “Banana Hill Art Gallery”
+                                        How We Became Banana Hill Art Gallery
                                         </h3>
                                         <p>
                                         Due to lack of support for Art in Kenya, artists often have to fend for themselves. Shine and Rahab opened their doors and provided accommodation, food and materials. The number of artist joining the couple grew steadily, and it became sensible to formalise the communal facilities in an official artists’ Studio.
-                                        In 1994, the Banana Hill Art Studio was born, starting with a membership of twelve artists. By 2005, this number had grown to over 38, some of whom had already made name internationally. In 2006, Shine Tani became the legal owner of what had been changed into the Banana Hill Art Gallery.
                                         </p>
                                         <!--=================== counter start====================-->
                                         <div class="pt50">
@@ -168,48 +175,14 @@
                                             </div>
                                         </div>
                                         <!--=================== counter end====================-->
+                                        
+                                        
                                     </div>
-                                    <!--===================testimonial start====================-->
-                                    <div class="testimonial_carousel mt50">
-
-                                        <div class="testimonial_box">
-                                            <p>
-                                            Alex Wainana is a self taught artist and has been doing sculptures for the last 12 years. Hooked up in art by Gallery Watatu former manager Ruth Schaffer, she encouraged him when she saw one of his first small metal sculpture. It was his turning point and since then, he has been growing into one of the best junk metal sculptor in the East African region.                                            </p>
-                                            <div class="testimonial_author">
-                                                <img src="assets/img/alex.png" alt="author">
-                                                <h5>Alex Wainana</h5>
-                                                <p>Founder <span>Banana Hill Art Gallery</span></p>
-                                            </div>
-                                        </div>
-
-                                        <div class="testimonial_box">
-                                            <p>
-                                            Andrew Kamondia wa Gathigi is a former farmer, sign writer and batik from Wangige whose first paintings were bought by Gallery Watatu’s Ruth Schaffner while he was still a farm Manager at Red Hill.                                            </p>
-                                            <div class="testimonial_author">
-                                                <img src="assets/img/alex.png" alt="author">
-                                                <h5>Andrew Kamondia</h5>
-                                                <p>Co-founder <span>Banana Hill Art Gallery</span></p>
-                                            </div>
-                                        </div>
-
-                                        <div class="testimonial_box">
-                                            <p>
-                                            I have been active in painting and have participated many group exhibitions both locally and internationally. Because of my love for art, I have always made an effort to spread the skills, and to make sure as many people as possible can enjoy either the creation-process or the end result of art.
-
-</p>
-                                            <div class="testimonial_author">
-                                                <img src="assets/img/rahab.png" alt="author">
-                                                <h5>Rahab Shine</h5>
-                                                <p>Project manager <span>Banana Hill Art Gallery</span></p>
-                                            </div>
-                                        </div>
-                                        </div>
-                                    </div>
-                                    <!--===================testimonial end====================-->
+                                    
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 col-5 img_section" style="background-image: url('assets/img/bg/about.png');"></div>
+                        <div class="col-md-6 col-5 img_section" style="background-image: url('assets/img/bg/africa2.jpg');"></div>
                     </div>
                 </div>
             </div>

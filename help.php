@@ -74,7 +74,7 @@
                             Gallery
                         </a>
                     </li>
-                    <li class="active">
+                    <li>
                         <a href="events.php">
                             Events
                         </a>
@@ -89,7 +89,7 @@
                             Contact
                         </a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="help.php">
                             Help
                         </a>
@@ -126,9 +126,44 @@
 
         <!--=================== content body ====================-->
         <div class="col-lg-10 col-md-9 col-12 body_block  align-content-center">
-            <div class="portfolio">
-                <div class="container-fluid">
-                    
+        <div>
+                <div class="img_card">
+                    <div class="row justify-content-center">
+                        <div class="col-md-6 col-7 content_section">
+                            <div class="content_box">
+                                <div class="content_box_inner">
+                                    <div>
+                                        <h1 style="color=">
+                                        FREQUENTLY ASKED QUESTIONS
+                                        </h1>
+                                        <h3>
+                                            Do I need to have an account?
+                                        </h3>
+                                        <p>
+                                        Viewing our gallery online does not need an account.<br>
+                                        You do need an account for purchasing art online.<br>
+                                        </p>
+                                        <h3>
+                                            How can I buy art online from the gallery?
+                                        </h3>
+                                        <p>
+                                        Ensure you have an account with us.<br>
+                                        Open the <a href="gallery.php" style="color:#3399ff">gallery</a> page from the side bar.<br>
+                                        Scroll for your desired art and add to cart.<br>
+                                        </p>
+                                        <h3>
+                                            Can any artist join Banana Hill art gallery?
+                                        </h3>
+                                        <p>
+                                        Sure! Any artist can join our gallery.<br>
+                                        All you need to do is <a href="contact.php" style="color:#3399ff">contact us</a> and give us your details.<br>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-5 img_section" style="background-image: url('assets/img/bg/help.png');"></div>
+                    </div>
                 </div>
             </div>
         </div>
