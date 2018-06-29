@@ -1,3 +1,55 @@
+<?php
+session_start();
+ $connect = mysqli_connect("localhost", "root", "", "hc1");
+ if(isset($_POST["add_ticket"]))
+ {
+      if(isset($_SESSION["tickets"]))
+      {
+           $item_array_id = array_column($_SESSION["tickets"], "id");
+           if(!in_array($_GET["id"], $item_array_id))
+           {
+                $count = count($_SESSION["tickets"]);
+                $item_array = array(
+                     'id'               =>     $_GET["id"],
+                     'event'               =>     $_POST["hidden_name"],
+                     'price'          =>     $_POST["hidden_price"],
+                     'tickets'          =>     $_POST["tickets"]
+                );
+                $_SESSION["tickets"][$count] = $item_array;
+           }
+           else
+           {
+                echo '<script>alert("Item Already Added")</script>';
+                echo '<script>window.location="events.php"</script>';
+           }
+      }
+      else
+      {
+           $item_array = array(
+                'id'               =>     $_GET["id"],
+                'event'               =>     $_POST["hidden_name"],
+                'price'          =>     $_POST["hidden_price"],
+                'tickets'          =>     $_POST["tickets"]
+           );
+           $_SESSION["tickets"][0] = $item_array;
+      }
+ }
+ if(isset($_GET["action"]))
+ {
+      if($_GET["action"] == "delete")
+      {
+           foreach($_SESSION["tickets"] as $keys => $values)
+           {
+                if($values["id"] == $_GET["id"])
+                {
+                     unset($_SESSION["tickets"][$keys]);
+                     echo '<script>alert("Item Removed")</script>';
+                     echo '<script>window.location="tickets.php"</script>';
+                }
+           }
+      }
+ }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,14 +98,13 @@
                 <a href="#">
                     <img src="assets/img/logo.png" alt="cocoon">
                 </a>
-                <p>Banana Hill Art Gallery</p>
             </div>
             <!--logo end-->
 
             <!--main menu -->
             <div class="side_menu_section">
                 <ul class="menu_nav">
-                    <li>
+                    <li class="active">
                         <a href="home.php">
                             Home
                         </a>
@@ -89,11 +140,6 @@
                             Contact
                         </a>
                     </li>
-                    <li class="active">
-                        <a href="help.php">
-                            Help
-                        </a>
-                    </li>
                 </ul>
             </div>
             <!--main menu end -->
@@ -103,7 +149,7 @@
                 <div class="side_menu_bottom_inner">
                     <ul class="social_menu">
                         <li>
-                            <a href="https://plus.google.com/108819026650804640672/"> <i class="ion ion-social-google"></i> </a>
+                            <a href="https://plus.google.com/108819026650804640672/"> <i class="ion ion-social-pinterest"></i> </a>
                         </li>
                         <li>
                             <a href="https://www.facebook.com/BananaHillArtGalleryInNairobi"> <i class="ion ion-social-facebook"></i> </a>
@@ -112,7 +158,11 @@
                             <a href="https://twitter.com/BananaHillArt"> <i class="ion ion-social-twitter"></i> </a>
                         </li>
                     </ul>
-
+                    <div class="copy_right">
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        <p class="copyright">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </div>
                 </div>
             </div>
             <!--social and copyright end -->
@@ -122,46 +172,54 @@
 
         <!--=================== content body ====================-->
         <div class="col-lg-10 col-md-9 col-12 body_block  align-content-center">
-        <div>
-                <div class="img_card">
-                    <div class="row justify-content-center">
-                        <div class="col-md-6 col-7 content_section">
-                            <div class="content_box">
-                                <div class="content_box_inner">
-                                    <div>
-                                        <h1 style="color=">
-                                        FREQUENTLY ASKED QUESTIONS
-                                        </h1>
-                                        <p>_______</p>
-                                        <br>
-                                        <h3>
-                                            Do I need to have an account?
-                                        </h3>
-                                        <p>
-                                        Viewing our gallery online does not need an account.<br>
-                                        You do need an account for purchasing art online.<br>
-                                        </p>
-                                        <h3>
-                                            How can I buy art online from the gallery?
-                                        </h3>
-                                        <p>
-                                        Ensure you have an account with us.<br>
-                                        Open the <a href="gallery.php" style="color:#3399ff">gallery</a> page from the side bar.<br>
-                                        Scroll for your desired art and add to cart.<br>
-                                        </p>
-                                        <h3>
-                                            Can any artist join Banana Hill art gallery?
-                                        </h3>
-                                        <p>
-                                        Sure! Any artist can join our gallery.<br>
-                                        All you need to do is <a href="contact.php" style="color:#3399ff">contact us</a> and give us your details.<br>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-5 img_section" style="background-image: url('assets/img/bg/help.png');"></div>
+            <div class="portfolio">
+                <div class="container-fluid">
+                    <!--=================== masaonry portfolio start====================-->
+
+                    <div style="clear:both"></div>
+                    <br />
+                    <h3>Order Details</h3>
+                    <div class="table-responsive">
+                         <table class="table table-bordered">
+                              <tr>
+                                   <th width="40%">Event Name</th>
+                                   <th width="10%">Tickets</th>
+                                   <th width="20%">Price</th>
+                                   <th width="15%">Total</th>
+                                   <th width="5%">Action</th>
+                              </tr>
+                              <?php
+                              if(!empty($_SESSION["tickets"]))
+                              {
+                                   $total = 0;
+                                   foreach($_SESSION["tickets"] as $keys => $values)
+                                   {
+                              ?>
+                              <tr>
+                                   <td><?php echo $values["event"]; ?></td>
+                                   <td><?php echo $values["tickets"]; ?></td>
+                                   <td>$ <?php echo $values["price"]; ?></td>
+                                   <td>$ <?php echo number_format($values["tickets"] * $values["price"], 2); ?></td>
+                                   <td><a href="tickets.php?action=delete&id=<?php echo $values["id"]; ?>"><span class="text-danger">Remove</span></a></td>
+                              </tr>
+                              <?php
+                                        $total = $total + ($values["tickets"] * $values["price"]);
+                                   }
+                              ?>
+                              <tr>
+                                   <td colspan="3" align="right">Total</td>
+                                   <td align="right">$ <?php echo number_format($total, 2); ?></td>
+                                   <td></td>
+                              </tr>
+                              <?php
+                              }
+                              ?>
+                         </table>
                     </div>
+
+                    <button type="button" name="button"><a href="checkout.php?action=delete&id=<?php echo $values["item_id"]; ?>">Checkout</a></button>
+               </div>
+               <br />
                 </div>
             </div>
         </div>
@@ -195,6 +253,7 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
+
   gtag('config', 'UA-23581568-13');
 </script>
 </body>

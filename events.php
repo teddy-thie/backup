@@ -1,4 +1,21 @@
-
+<?php
+$connect = mysqli_connect("localhost", "root", "", "hc1");
+if(isset($_POST["insert"]))
+{
+    $event = $_POST['event'];
+    $description = $_POST['description'];
+        $start = $_POST['start'];
+            $end = $_POST['end'];
+     $file = addslashes(file_get_contents($_FILES["image"]["tmp_name"]));
+     $query = "INSERT INTO event(image,event,descr,estart,eend) VALUES ('$file','$event','$description','$start','$end')";
+     if(mysqli_query($connect, $query))
+     {
+          echo '<script>alert("Event Inserted into Database")</script>';
+     }
+   else {
+echo("Error description: " . mysqli_error($connect));   }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,6 +64,7 @@
                 <a href="#">
                     <img src="assets/img/logo.png" alt="cocoon">
                 </a>
+                <p>Banana Hill Art Gallery</p>
             </div>
             <!--logo end-->
 
@@ -103,7 +121,7 @@
                 <div class="side_menu_bottom_inner">
                     <ul class="social_menu">
                         <li>
-                            <a href="https://plus.google.com/108819026650804640672/"> <i class="ion ion-social-google"></i> </a>
+                            <a href="https://plus.google.com/108819026650804640672/"> <i class="ion ion-social-pinterest"></i> </a>
                         </li>
                         <li>
                             <a href="https://www.facebook.com/BananaHillArtGalleryInNairobi"> <i class="ion ion-social-facebook"></i> </a>
@@ -112,11 +130,7 @@
                             <a href="https://twitter.com/BananaHillArt"> <i class="ion ion-social-twitter"></i> </a>
                         </li>
                     </ul>
-                    <div class="copy_right">
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        <p class="copyright">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                    </div>
+
                 </div>
             </div>
             <!--social and copyright end -->
@@ -125,13 +139,39 @@
         <!--=================== side menu end====================-->
 
         <!--=================== content body ====================-->
-        <div class="col-lg-10 col-md-9 col-12 body_block  align-content-center">
-            <div class="portfolio">
-                <div class="container-fluid">
-                    
+        <div class="col-lg-10  body_block  align-content-center">
+          <h1>Have a look at our upcoming events</h1>
+          <p>_______</p>
+          <br>
+          <?php
+                $query = "SELECT * FROM event ORDER BY id ASC";
+                $result = mysqli_query($connect, $query);
+                if(mysqli_num_rows($result) > 0)
+                {
+                     while($row = mysqli_fetch_array($result))
+                     {
+                        ?>
+                     <form method="post" action="tickets.php?action=add&id=<?php echo $row["id"]; ?>">
+                       <div style="border:5px solid #333; background-color:white;  padding:5px;" align="center" >
+                     <table>
+                         <tr>
+
+                         <td> <?php echo'<img  src="data:image/jpeg;base64,'.base64_encode($row["image"]).'" width="250px" height="250px" class="img-responsive" /> ';?>
+                               <h3 class="text-info"><?php echo $row["event"]; ?></h3>
+                               <h4 class="text-danger"><?php echo $row["descr"]; ?></h4>
+                               <h3 class="text-info"><?php echo $row["estart"]; ?></h3>
+                               <h3 class="text-info"><?php echo $row["eend"]; ?></h3>
+                               <input type="hidden" name="hidden_name" value="<?php echo $row["event"]; ?>" /><td></tr>
+
+                               </table>
                 </div>
-            </div>
-        </div>
+                </form>
+                <?php
+                     }
+                }
+                ?>
+              </div>
+
         <!--=================== content body end ====================-->
     </div>
 </div>
@@ -167,3 +207,25 @@
 </script>
 </body>
 </html>
+<script>
+$(document).ready(function(){
+     $('#insert').click(function(){
+          var image_name = $('#image').val();
+          if(image_name == '')
+          {
+               alert("Please Select Image");
+               return false;
+          }
+          else
+          {
+               var extension = $('#image').val().split('.').pop().toLowerCase();
+               if(jQuery.inArray(extension, ['gif','png','jpg','jpeg']) == -1)
+               {
+                    alert('Invalid Image File');
+                    $('#image').val('');
+                    return false;
+               }
+          }
+     });
+});
+</script>

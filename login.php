@@ -1,3 +1,20 @@
+<?php
+$email = $_POST['email'];//username
+$password = $_POST['password'];//password
+
+$con = mysqli_connect("localhost","root","","hc1");
+$result =mysqli_query($con, "SELECT * FROM admin WHERE 'email' = '$email'  && 'password' = '$password'");
+$count = mysqli_num_rows($result);
+
+if($count=1){
+    echo "Login success";
+    header("location:admin.php");
+}
+else{
+    echo "incorrect details"; 
+    header("refresh:2;url=login.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,7 +63,6 @@
                 <a href="#">
                     <img src="assets/img/logo.png" alt="cocoon">
                 </a>
-                <p>Banana Hill Art Gallery</p>
             </div>
             <!--logo end-->
 
@@ -74,7 +90,7 @@
                             Gallery
                         </a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="events.php">
                             Events
                         </a>
@@ -89,7 +105,7 @@
                             Contact
                         </a>
                     </li>
-                    <li class="active">
+                    <li>
                         <a href="help.php">
                             Help
                         </a>
@@ -112,7 +128,11 @@
                             <a href="https://twitter.com/BananaHillArt"> <i class="ion ion-social-twitter"></i> </a>
                         </li>
                     </ul>
-
+                    <div class="copy_right">
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        <p class="copyright">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </div>
                 </div>
             </div>
             <!--social and copyright end -->
@@ -122,46 +142,16 @@
 
         <!--=================== content body ====================-->
         <div class="col-lg-10 col-md-9 col-12 body_block  align-content-center">
-        <div>
-                <div class="img_card">
-                    <div class="row justify-content-center">
-                        <div class="col-md-6 col-7 content_section">
-                            <div class="content_box">
-                                <div class="content_box_inner">
-                                    <div>
-                                        <h1 style="color=">
-                                        FREQUENTLY ASKED QUESTIONS
-                                        </h1>
-                                        <p>_______</p>
-                                        <br>
-                                        <h3>
-                                            Do I need to have an account?
-                                        </h3>
-                                        <p>
-                                        Viewing our gallery online does not need an account.<br>
-                                        You do need an account for purchasing art online.<br>
-                                        </p>
-                                        <h3>
-                                            How can I buy art online from the gallery?
-                                        </h3>
-                                        <p>
-                                        Ensure you have an account with us.<br>
-                                        Open the <a href="gallery.php" style="color:#3399ff">gallery</a> page from the side bar.<br>
-                                        Scroll for your desired art and add to cart.<br>
-                                        </p>
-                                        <h3>
-                                            Can any artist join Banana Hill art gallery?
-                                        </h3>
-                                        <p>
-                                        Sure! Any artist can join our gallery.<br>
-                                        All you need to do is <a href="contact.php" style="color:#3399ff">contact us</a> and give us your details.<br>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-5 img_section" style="background-image: url('assets/img/bg/help.png');"></div>
-                    </div>
+            <div class="portfolio">
+                <div class="container-fluid">
+                    <h1>Admin Login Form</h1>
+                    <form action="login.php">
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email"><br>
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password"><br>
+    <input type="submit" value="submit"><br>
+    </form>
                 </div>
             </div>
         </div>
@@ -195,6 +185,7 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
+
   gtag('config', 'UA-23581568-13');
 </script>
 </body>

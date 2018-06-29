@@ -1,4 +1,37 @@
+<?php
+$output = NULL;
 
+
+if (isset($_POST['submit'])) {
+  $mysqli = NEW MySQLi('localhost','root','','hc1');
+
+  $name = $_POST['name'];
+  $email = $_POST['email'];
+  $subject = $_POST['subject'];
+  $message = $_POST['message'];
+
+  $query = $mysqli->query("SELECT * FROM contact WHERE name = '$name'");
+
+  if(empty($name) or empty($email)or empty($subject)or empty($message)){
+    $output = "Please fill in all the fields.";
+  }
+  elseif($query->num_rows != 0) {
+    $output = "That artist's name has already been registered";
+  }
+  else {
+    //Insertion of the record
+    $insert = $mysqli->query("INSERT INTO contact(name,email,subject,message) VALUES('$name','$email','$subject','$message')");
+
+      if($insert != TRUE){
+        $output = "There was a problem <br />";
+        $output .= $mysqli->error;
+      }else {
+        $output = "You have been rightfully registered!";
+      }
+  }
+}
+
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,6 +80,7 @@
                 <a href="#">
                     <img src="assets/img/logo.png" alt="cocoon">
                 </a>
+                <p>Banana Hill Art Gallery</p>
             </div>
             <!--logo end-->
 
@@ -89,6 +123,11 @@
                             Contact
                         </a>
                     </li>
+                    <li>
+                      <a href="help.php">
+                          Help
+                      </a>
+                    </li>
                 </ul>
             </div>
             <!--main menu end -->
@@ -98,7 +137,7 @@
                 <div class="side_menu_bottom_inner">
                     <ul class="social_menu">
                         <li>
-                            <a href="https://plus.google.com/108819026650804640672/"> <i class="ion ion-social-google"></i> </a>
+                            <a href="https://plus.google.com/108819026650804640672/"> <i class="ion ion-social-pinterest"></i> </a>
                         </li>
                         <li>
                             <a href="https://www.facebook.com/BananaHillArtGalleryInNairobi"> <i class="ion ion-social-facebook"></i> </a>
@@ -132,11 +171,13 @@
                                         <h3>
                                             Get in touch with us
                                         </h3>
+                                        <p>_______</p>
+                                        <br>
                                         <h2>
                                             Contacting “the pearl among the art galleries in Nairobi”
                                         </h2>
                                         <p>
-                                        On this page you will find our address, our opening times, a map, and a contact form.
+                                        On this page you will find our address, a map, and a contact form.
 
 We are present on Facebook, Google Plus, and on Twitter. Do “like” us, and do “follow” us there.
 
@@ -152,8 +193,8 @@ Banana Hill Art Gallery: among the best art galleries in Nairobi!
                                                     <img src="assets/img/icons/satelite.png" alt="info list">
                                                     <div class="content align-items-center">
                                                         <p>
-                                                            Rosia Road , No234/56<br/>
-                                                            Gibraltar , UK
+                                                            Banana Raini Road<br/>
+                                                            Nairobi, Kenya
                                                         </p>
                                                     </div>
                                                 </div>
@@ -182,27 +223,30 @@ Banana Hill Art Gallery: among the best art galleries in Nairobi!
                                                 </div>
                                             </li>
                                         </ul>
+<form class="" action="contact.php" method="POST">
 
                                         <div class="mt75 row justify-content-center">
                                             <div class="col-lg-6 col-12">
-                                                <input type="text" placeholder="Name" class="form-control">
+                                                <input type="text" name="name" placeholder="Name" class="form-control">
                                             </div>
                                             <div class="col-lg-6 col-12">
-                                                <input type="email" placeholder="E-Mail" class="form-control">
+                                                <input type="email" name="email" placeholder="E-Mail" class="form-control">
                                             </div>
                                             <div class="col-12">
-                                                <input type="text" placeholder="Subject" class="form-control">
+                                                <input type="text" name="subject" placeholder="Subject" class="form-control">
                                             </div>
                                             <div class="col-12">
-                                                <textarea  placeholder="Massage" class="form-control" cols="4" rows="4"></textarea>
+                                                <textarea  placeholder="Message" name="message" class="form-control" cols="4" rows="4"></textarea>
                                             </div>
                                             <div class="col-12">
-                                                <button type="submit" class="btn btn-primary">Send</button>
+                                                <button type="submit" name="submit" class="btn btn-primary">Send</button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+
+                          </form>
                             <!--=================== contact info and form end====================-->
                         </div>
                         <div class="col-md-6 col-5 img_section" style="background-color:#000;">

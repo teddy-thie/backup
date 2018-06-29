@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,6 +46,7 @@
                 <a href="#">
                     <img src="assets/img/logo.png" alt="cocoon">
                 </a>
+                <p>Banana Hill Art Gallery</p>
             </div>
             <!--logo end-->
 
@@ -112,11 +112,7 @@
                             <a href="https://twitter.com/BananaHillArt"> <i class="ion ion-social-twitter"></i> </a>
                         </li>
                     </ul>
-                    <div class="copy_right">
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        <p class="copyright">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                    </div>
+
                 </div>
             </div>
             <!--social and copyright end -->
@@ -126,6 +122,11 @@
 
         <!--=================== content body ====================-->
         <div class="col-lg-10 col-md-9 col-12 body_block  align-content-center">
+          <h1>
+          Some of our pieces for your viewing pleasure
+          </h1>
+          <p>_______</p>
+          <br>
             <!--=================== filter portfolio start====================-->
             <div class="portfolio gutters grid img-container">
                 <div class="grid-sizer col-sm-12 col-md-6 col-lg-3"></div>
@@ -310,7 +311,7 @@
                     </a>
                 </div>
             </div>
-            
+
             <!--=================== filter portfolio end====================-->
         </div>
         <!--=================== content body end ====================-->
@@ -344,7 +345,6 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'UA-23581568-13');
 </script>
 </body>

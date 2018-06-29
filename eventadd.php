@@ -1,10 +1,3 @@
-<?php
-    
-
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -42,6 +35,7 @@
                     <i class="fa fa-bars"></i>
                 </button>
                 <p>Banana Hill Art Gallery</p>
+                <a class="navbar-brand" href="./"><img src="assets/img/logo.png" alt="Logo"></a>
                 <a class="navbar-brand hidden" href="./"><img src="images/logo2.png" alt="Logo"></a>
             </div>
             <div id="main-menu" class="main-menu collapse navbar-collapse">
@@ -55,6 +49,9 @@
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="fa fa-puzzle-piece"></i><a href="adminview.php">View Users</a></li>
                             <li><i class="fa fa-puzzle-piece"></i><a href="adminadd.php">Add Users</a></li>
+
+                            <li><i class="fa fa-puzzle-piece"></i><a href="artistview.php">View Artists</a></li>
+                            <li><i class="fa fa-puzzle-piece"></i><a href="artistadd.php">Add Artists</a></li>
                         </ul>
                     </li>
                     <h3 class="menu-title">GALLERY ACTIONS</h3><!-- /.menu-title -->
@@ -76,54 +73,41 @@
             </div><!-- /.navbar-collapse -->
     </nav>
   </aside>
-  <div class="right-panel" id="right-panel">
-    <header id="header" class="header">
-      <div class="header-menu">
-
-                <div class="col-sm-7">
-                    <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
-                    <div class="header-left">
-                        <button class="search-trigger"><i class="fa fa-search"></i></button>
-                        <div class="form-inline">
-                            <form class="search-form">
-                                <input class="form-control mr-sm-2" type="text" placeholder="Search ..." aria-label="Search">
-                                <button class="search-close" type="submit"><i class="fa fa-close"></i></button>
-                            </form>
-                        </div>
-                      </div>
-
-    </header>
-    <div class="breadcrumbs">
-            <div class="col-sm-4">
-                <div class="page-header float-left">
-                    <div class="page-title">
-                        <h1>Add events</h1>
-                    </div>
-                </div>
-            </div>
 
 
-  </div>
-  <div class="card">
+</div>
+<div class="col-lg-6">
+                    <div class="card">
                       <div class="card-header">
-                        Add Event
+                        <strong>Upload an Event</strong>
                       </div>
                       <div class="card-body card-block">
-                        <form action="eventadd.php" method="post" class="">
-                          <div class="form-group"><label for="title" class=" form-control-label">Title</label><input type="text" id="nf-email" name="title" placeholder="Enter Title.." class="form-control"></div>
-                          <div class="col col-md-3"><label for="file-input" class=" form-control-label">Upload image</label></div>
-                          <div class="col-12 col-md-9"><input type="file" id="file-input" name="file-input" class="form-control-file"></div>
-                            <div class="col col-md-3"><label for="textarea-input" class=" form-control-label">Post</label></div>
-                            <div class="col-12 col-md-9"><textarea name="post" id="textarea-input" rows="9" placeholder="Content..." class="form-control">Text</textarea></div>
-                        </form>
-                      </div>
-                      <div class="card-footer">
-                        <input type="submit">
-                        <button type="reset" class="btn btn-danger btn-sm">
-                          <i class="fa fa-ban"></i> Reset
-                        </button>
-                      </div>
+                      <br />
+             <form method="post" enctype="multipart/form-data" action="events.php">
+               <label>Event<br>
+                 <input type="text" name="event" value=""><br>
+               </label>
+               <br>
+               <label>Description<br>
+                 <input type="text" name="description" value=""><br>
+               </label>
+               <br>
+              <label>Start Date<br>
+                <input type="date" name="start" class="form-control" ><br>
+              </label>
+
+              <label>End Date<br>
+                <input type="date" name="end" class="form-control"><br>
+              </label>
+              <br>
+                  <input type="file" name="image" id="image" /><br>
+                  <br />
+                  <input type="submit" name="insert" id="insert" value="Insert" class="btn btn-info" />
+             </form>
+
                     </div>
+
+
 
 
 

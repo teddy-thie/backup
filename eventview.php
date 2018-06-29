@@ -34,7 +34,7 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="./"><img src="images/logo.png" alt="Logo"></a>
+                <a class="navbar-brand" href="./"><img src="assets/img/logo.png" alt="Logo"></a>
                 <a class="navbar-brand hidden" href="./"><img src="images/logo2.png" alt="Logo"></a>
             </div>
             <div id="main-menu" class="main-menu collapse navbar-collapse">
@@ -48,6 +48,9 @@
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="fa fa-puzzle-piece"></i><a href="adminview.php">View Users</a></li>
                             <li><i class="fa fa-puzzle-piece"></i><a href="adminadd.php">Add Users</a></li>
+
+                            <li><i class="fa fa-puzzle-piece"></i><a href="artistview.php">View Artists</a></li>
+                            <li><i class="fa fa-puzzle-piece"></i><a href="artistadd.php">Add Artists</a></li>
                         </ul>
                     </li>
                     <h3 class="menu-title">GALLERY ACTIONS</h3><!-- /.menu-title -->
@@ -97,6 +100,79 @@
 
 
   </div>
+
+  <div class="breadcrumbs">
+          <div class="col-sm-4">
+              <div class="page-header float-left">
+                  <div class="page-title">
+                      <h1>View Artists</h1>
+                  </div>
+              </div>
+          </div>
+
+
+</div>
+<div class="col-lg-6">
+                  <div class="card">
+                      <div class="card-header">
+                          <strong class="card-title">List of Events</strong>
+                      </div>
+                      <div class="card-body">
+                          <table class="table table-dark" >
+                            <thead>
+                              <tr>
+                                <th scope="col">Image</th>
+                                <th scope="col">Event Name</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Tickets</th>
+                                <th scope="col">Event Start Date</th>
+                                <th scope="col">Event End Date</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+<?php
+$con=mysqli_connect("localhost","root","","hc1");
+// Check connection
+if (mysqli_connect_errno())
+{
+echo "Failed to connect to MySQL: " . mysqli_connect_error();
+}
+$ViewQuery = "SELECT * FROM event ORDER BY id DESC";
+$Excecute = mysqli_query($con,$ViewQuery);
+
+while ($DataRows=mysqli_fetch_array($Excecute, MYSQLI_ASSOC)) {
+  $image = $DataRows["image"];
+  $event = $DataRows["event"];
+  $description = $DataRows["descr"];
+  $price = $DataRows["price"];
+  $tickets = $DataRows["tickets"];
+  $start = $DataRows["estart"];
+  $end = $DataRows["eend"];
+
+
+
+?>
+                              <tr>
+                                <td><img src="data:image/jpeg;base64<?php base64_encode($image) ?>" class="img-responsive" /><br /></td>
+                                <td><?php echo $event ?></td>
+                                <td><?php echo $description ?></td>
+                                <td><?php echo $price ?></td>
+                                <td><?php echo $tickets ?></td>
+                                <td><?php echo $start ?></td>
+                                <td><?php echo $end ?></td>
+                              </tr>
+                            <?php } ?>
+                            </tbody>
+
+                          </table>
+                      </div>
+                  </div>
+              </div>
+
+
+
+
 
 
 

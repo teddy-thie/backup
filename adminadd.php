@@ -77,7 +77,7 @@ if (isset($_POST['submit'])) {
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="./"><img src="images/logo.png" alt="Logo"></a>
+                <a class="navbar-brand" href="./"><img src="assets/img/logo.png" alt="Logo"></a>
                 <a class="navbar-brand hidden" href="./"><img src="images/logo2.png" alt="Logo"></a>
             </div>
             <div id="main-menu" class="main-menu collapse navbar-collapse">
@@ -91,6 +91,8 @@ if (isset($_POST['submit'])) {
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="fa fa-puzzle-piece"></i><a href="adminview.php">View Users</a></li>
                             <li><i class="fa fa-puzzle-piece"></i><a href="adminadd.php">Add Users</a></li>
+                            <li><i class="fa fa-puzzle-piece"></i><a href="artistview.php">View Artists</a></li>
+                            <li><i class="fa fa-puzzle-piece"></i><a href="artistadd.php">Add Artists</a></li>
                         </ul>
                     </li>
                     <h3 class="menu-title">GALLERY ACTIONS</h3><!-- /.menu-title -->
@@ -154,11 +156,11 @@ if (isset($_POST['submit'])) {
                           <div class="row form-group">
                             <div class="col col-md-3"><label for="text-input" class=" form-control-label">Last Name</label></div>
                             <div class="col-12 col-md-9"><input type="text" id="text-input" name="lname" placeholder="Last Name" class="form-control"><small class="form-text text-muted">Enter Last Name</small></div>
-                          </div>                          
+                          </div>
                           <div class="row form-group">
                             <div class="col col-md-3"><label for="email-input" class=" form-control-label">Email Input</label></div>
                             <div class="col-12 col-md-9"><input type="email" id="email-input" name="email" placeholder="Enter Email" class="form-control"><small class="form-text text-muted">Please enter your email</small></div>
-                          </div>                      
+                          </div>
                           <div class="row form-group">
                             <div class="col col-md-3"><label for="password-input" class=" form-control-label">Password</label></div>
                             <div class="col-12 col-md-9"><input type="password" id="password-input" name="password" placeholder="Password" class="form-control"><small class="form-text text-muted">Please enter password</small></div>

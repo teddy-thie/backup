@@ -47,6 +47,7 @@
                 <a href="#">
                     <img src="assets/img/logo.png" alt="cocoon">
                 </a>
+                <p>Banana Hill Art Gallery</p>
             </div>
             <!--logo end-->
 
@@ -95,7 +96,6 @@
                         </a>
                     </li>
                 </ul>
-                
             </div>
             <!--main menu end -->
 
@@ -104,7 +104,7 @@
                 <div class="side_menu_bottom_inner">
                     <ul class="social_menu">
                         <li>
-                            <a href="https://plus.google.com/108819026650804640672/"> <i class="ion ion-social-google"></i> </a>
+                            <a href="https://plus.google.com/108819026650804640672/"> <i class="ion ion-social-pinterest"></i> </a>
                         </li>
                         <li>
                             <a href="https://www.facebook.com/BananaHillArtGalleryInNairobi"> <i class="ion ion-social-facebook"></i> </a>
@@ -113,11 +113,6 @@
                             <a href="https://twitter.com/BananaHillArt"> <i class="ion ion-social-twitter"></i> </a>
                         </li>
                     </ul>
-                    <div class="copy_right">
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        <p class="copyright">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                    </div>
                 </div>
             </div>
             <!--social and copyright end -->
@@ -129,10 +124,53 @@
         <div class="col-lg-10 col-md-9 col-12 body_block  align-content-center">
             <div class="portfolio">
                 <div class="container-fluid">
-                    
-                </div>
-            </div>
-        </div>
+
+        <div class="col-lg-6">
+                          <div class="card">
+                              <div class="card-header">
+                                  <strong class="card-title">List of Artists</strong>
+                              </div>
+                              <div class="card-body">
+                                  <table class="table table-dark" >
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">Artist Name</th>
+                                        <th scope="col">Description</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+      <?php
+      $con=mysqli_connect("localhost","root","","banana");
+      // Check connection
+      if (mysqli_connect_errno())
+      {
+      echo "Failed to connect to MySQL: " . mysqli_connect_error();
+      }
+        $ViewQuery = "SELECT * FROM artists ORDER BY id DESC";
+        $Excecute = mysqli_query($con,$ViewQuery);
+
+        while ($DataRows=mysqli_fetch_array($Excecute, MYSQLI_ASSOC)) {
+          $aname = $DataRows["aname"];
+          $description = $DataRows["description"];
+
+        ?>
+                                      <tr>
+                                        <td><?php echo $aname ?></td>
+                                        <td><?php echo $description ?></td>
+                                        <td>
+                                      </tr>
+                                    <?php } ?>
+                                    </tbody>
+
+                                  </table>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+
+
         <!--=================== content body end ====================-->
     </div>
 </div>

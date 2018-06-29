@@ -47,6 +47,7 @@
                 <a href="#">
                     <img src="assets/img/logo.png" alt="cocoon">
                 </a>
+                <p>Banana Hill Art Gallery</p>
             </div>
             <!--logo end-->
 
@@ -103,7 +104,7 @@
                 <div class="side_menu_bottom_inner">
                     <ul class="social_menu">
                         <li>
-                            <a href="https://plus.google.com/108819026650804640672/"> <i class="ion ion-social-google"></i> </a>
+                            <a href="https://plus.google.com/108819026650804640672/"> <i class="ion ion-social-pinterest"></i> </a>
                         </li>
                         <li>
                             <a href="https://www.facebook.com/BananaHillArtGalleryInNairobi"> <i class="ion ion-social-facebook"></i> </a>
@@ -112,11 +113,6 @@
                             <a href="https://twitter.com/BananaHillArt"> <i class="ion ion-social-twitter"></i> </a>
                         </li>
                     </ul>
-                    <div class="copy_right">
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        <p class="copyright">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                    </div>
                 </div>
             </div>
             <!--social and copyright end -->
@@ -125,22 +121,27 @@
         <!--=================== side menu end====================-->
 
         <!--=================== content body ====================-->
+
         <div class="col-lg-10 col-md-9 col-12 body_block  align-content-center">
+          <h1>
+            Welcome to Banana Hill Art Gallery
+          </h1>
+          <p>_______</p>
+          <br>
             <div class="portfolio">
                 <div class="container-fluid">
-                <h1>Welcome to Banana Hill Art Gallery</h1>
                     <!--=================== masaonry portfolio start====================-->
                     <div class="grid img-container justify-content-center no-gutters">
                         <div class="grid-sizer col-sm-12 col-md-6 col-lg-3"></div>
                         <div class="grid-item branding  col-sm-12 col-md-6 col-lg-3">
-                            <a href="assets/img/portfolio/home-port1.png" title="project name 1">
+                            <a href="assets/img/bg/portrait_1.jpg" title="Watching Woman">
                                 <div class="project_box_one">
-                                    <img src="assets/img/portfolio/home-port1.png" alt="pro1" />
+                                    <img src="assets/img/bg/portrait_1.jpg" alt="pro1" />
                                     <div class="product_info">
                                         <div class="product_info_text">
                                             <div class="product_info_text_inner">
                                                 <i class="ion ion-plus"></i>
-                                                <h4>project name</h4>
+                                                <h4>Watching Woman</h4>
                                             </div>
                                         </div>
                                     </div>
@@ -148,14 +149,14 @@
                             </a>
                         </div>
                         <div class="grid-item  branding architecture  col-sm-12 col-md-6">
-                            <a href="assets/img/portfolio/home-port2.png" title="project name 2">
+                            <a href="assets/img/bg/landscape_2.jpg" title="Zebras in Flight">
                                 <div class="project_box_one">
-                                    <img src="assets/img/portfolio/home-port2.png" alt="pro1" />
+                                    <img src="assets/img/bg/landscape_2.jpg" alt="pro1" />
                                     <div class="product_info">
                                         <div class="product_info_text">
                                             <div class="product_info_text_inner">
                                                 <i class="ion ion-plus"></i>
-                                                <h4>project name</h4>
+                                                <h4>Zebras in Flight</h4>
                                             </div>
                                         </div>
                                     </div>
@@ -163,14 +164,14 @@
                             </a>
                         </div>
                         <div class="grid-item  design col-sm-12 col-md-6 col-lg-3">
-                            <a href="assets/img/portfolio/home-port3.png" title="project name 5">
+                            <a href="assets/img/bg/small_3.jpg" title="Rendille Girl">
                                 <div class="project_box_one">
-                                    <img src="assets/img/portfolio/home-port3.png" alt="pro1" />
+                                    <img src="assets/img/bg/small_3.jpg" alt="pro1" />
                                     <div class="product_info">
                                         <div class="product_info_text">
                                             <div class="product_info_text_inner">
                                                 <i class="ion ion-plus"></i>
-                                                <h4>project name</h4>
+                                                <h4>Rendille Girl</h4>
                                             </div>
                                         </div>
                                     </div>
@@ -178,14 +179,14 @@
                             </a>
                         </div>
                         <div class="grid-item  photography design col-sm-12 col-md-6 col-lg-3">
-                            <a href="assets/img/portfolio/home-port4.png" title="project name 5">
+                            <a href="assets/img/bg/small_4.jpg" title="Woman in wait">
                                 <div class="project_box_one">
-                                    <img src="assets/img/portfolio/home-port4.png" alt="pro1" />
+                                    <img src="assets/img/bg/small_4.jpg" alt="pro1" />
                                     <div class="product_info">
                                         <div class="product_info_text">
                                             <div class="product_info_text_inner">
                                                 <i class="ion ion-plus"></i>
-                                                <h4>project name</h4>
+                                                <h4>Woman in wait</h4>
                                             </div>
                                         </div>
                                     </div>
@@ -193,65 +194,77 @@
                             </a>
                         </div>
                         <div class="grid-item  branding photography  col-sm-12 col-md-6 col-lg-3">
-                            <a href="assets/img/portfolio/home-port5.png" title="project name 5">
+                            <a href="assets/img/bg/small_6.jpg" title="Morning Glory">
                                 <div class="project_box_one">
-                                    <img src="assets/img/portfolio/home-port5.png" alt="pro1" />
+                                    <img src="assets/img/bg/small_6.jpg" alt="pro1" />
                                     <div class="product_info">
                                         <div class="product_info_text">
                                             <div class="product_info_text_inner">
                                                 <i class="ion ion-plus"></i>
-                                                <h4>project name</h4>
+                                                <h4>Morning Glory</h4>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </a>
                         </div>
-                        
-                    </div>
+
+
+
+
                     <!--=================== masaonry portfolio end====================-->
-                    <br><br>
-                    <!--===================testimonial start====================-->
-                    <h3>Here is a little something from our partners</h3>
-                    <div class="testimonial_carousel mt50">
+
+                </div>
+                <br>
+                <br>
+                <div>
+                  <h3>Our opening hours</h3>
+                  <p>_______</p>
+                <table cellpadding="0" cellspacing="0" class="wpseo-opening-hours"><tr><td class="day">Monday&nbsp;</td><td class="time"><time  content="Mo 10:00-18:00">10:00 - 18:00</time></td></tr><tr><td class="day">Tuesday&nbsp;</td><td class="time"><time  content="Tu 10:00-18:00">10:00 - 18:00</time></td></tr><tr><td class="day">Wednesday&nbsp;</td><td class="time"><time  content="We 10:00-18:00">10:00 - 18:00</time></td></tr><tr><td class="day">Thursday&nbsp;</td><td class="time"><time  content="Th 10:00-18:00">10:00 - 18:00</time></td></tr><tr><td class="day">Friday&nbsp;</td><td class="time"><time  content="Fr 10:00-18:00">10:00 - 18:00</time></td></tr><tr><td class="day">Saturday&nbsp;</td><td class="time"><time  content="Sa 10:00-18:00">10:00 - 18:00</time></td></tr><tr><td class="day">Sunday&nbsp;</td><td class="time"><time  content="Su 12:00-18:00">12:00 - 18:00</time></td></tr></table><br />
+
+<strong>Note</strong>: The &#8220;pearl among the art galleries in Nairobi&#8221; is open on <strong>all holidays</strong><br />
+</div>
+            </div>
+            <br><br><br>
+            <!--===================testimonial start====================-->
+            <h3>Here is a little something from our partners</h3>
+            <div class="testimonial_carousel mt50">
 
 <div class="testimonial_box">
-    
-    <p>
-    Alex Wainana is a self taught artist and has been doing sculptures for the last 12 years. Hooked up in art by Gallery Watatu former manager Ruth Schaffer, she encouraged him when she saw one of his first small metal sculpture. It was his turning point and since then, he has been growing into one of the best junk metal sculptor in the East African region.                                            </p>
-    <div class="testimonial_author">
-        <img src="assets/img/alex.png" alt="author">
-        <h5>Alex Wainana</h5>
-        <p>Founder <span>Banana Hill Art Gallery</span></p>
-    </div>
+
+<p>
+Alex Wainana is a self taught artist and has been doing sculptures for the last 12 years. Hooked up in art by Gallery Watatu former manager Ruth Schaffer, she encouraged him when she saw one of his first small metal sculpture. It was his turning point and since then, he has been growing into one of the best junk metal sculptor in the East African region.                                            </p>
+<div class="testimonial_author">
+<img src="assets/img/alex.png" alt="author">
+<h5>Alex Wainana</h5>
+<p>Founder <span>Banana Hill Art Gallery</span></p>
+</div>
 </div>
 
 <div class="testimonial_box">
-    <p>
-    Andrew Kamondia wa Gathigi is a former farmer, sign writer and batik from Wangige whose first paintings were bought by Gallery Watatu’s Ruth Schaffner while he was still a farm Manager at Red Hill.                                            </p>
-    <div class="testimonial_author">
-        <img src="assets/img/alex.png" alt="author">
-        <h5>Andrew Kamondia</h5>
-        <p>Co-founder <span>Banana Hill Art Gallery</span></p>
-    </div>
+<p>
+Andrew Kamondia wa Gathigi is a former farmer, sign writer and batik from Wangige whose first paintings were bought by Gallery Watatu’s Ruth Schaffner while he was still a farm Manager at Red Hill.                                            </p>
+<div class="testimonial_author">
+<img src="assets/img/alex.png" alt="author">
+<h5>Andrew Kamondia</h5>
+<p>Co-founder <span>Banana Hill Art Gallery</span></p>
+</div>
 </div>
 
 <div class="testimonial_box">
-    <p>
-    I have been active in painting and have participated many group exhibitions both locally and internationally. Because of my love for art, I have always made an effort to spread the skills, and to make sure as many people as possible can enjoy either the creation-process or the end result of art.
+<p>
+I have been active in painting and have participated many group exhibitions both locally and internationally. Because of my love for art, I have always made an effort to spread the skills, and to make sure as many people as possible can enjoy either the creation-process or the end result of art.
 
 </p>
-    <div class="testimonial_author">
-        <img src="assets/img/rahab.png" alt="author">
-        <h5>Rahab Shine</h5>
-        <p>Project manager <span>Banana Hill Art Gallery</span></p>
-    </div>
+<div class="testimonial_author">
+<img src="assets/img/rahab.png" alt="author">
+<h5>Rahab Shine</h5>
+<p>Project manager <span>Banana Hill Art Gallery</span></p>
+</div>
 </div>
 </div>
 </div>
 <!--===================testimonial end====================-->
-                </div>
-            </div>
         </div>
         <!--=================== content body end ====================-->
     </div>

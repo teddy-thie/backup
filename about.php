@@ -47,6 +47,7 @@
                 <a href="#">
                     <img src="assets/img/logo.png" alt="cocoon">
                 </a>
+                <p>Banana Hill Art Gallery</p>
             </div>
             <!--logo end-->
 
@@ -112,11 +113,6 @@
                             <a href="https://twitter.com/BananaHillArt"> <i class="ion ion-social-twitter"></i> </a>
                         </li>
                     </ul>
-                    <div class="copy_right">
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        <p class="copyright">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                    </div>
                 </div>
             </div>
             <!--social and copyright end -->
@@ -134,8 +130,10 @@
                                 <div class="content_box_inner">
                                     <div>
                                         <h1 style="color=">
-                                       About Us
+                                       Learn more about us
                                         </h1>
+                                        <p>_______</p>
+                                        <br>
                                         <h3>
                                             Who are we?
                                         </h3>
@@ -161,24 +159,24 @@
                                                 <div class="col-12 col-md-4">
                                                     <div class="counter_box">
                                                         <div class="divider"></div>
-                                                        <span class="counter">20</span>
-                                                        <h5>happy clients</h5>
+                                                        <span class="counter">216</span>
+                                                        <h5>Art Sold</h5>
                                                     </div>
                                                 </div>
                                                 <div class="col-12 col-md-4">
                                                     <div class="counter_box">
                                                         <div class="divider"></div>
-                                                        <span class="counter">40</span>
-                                                        <h5>projects completed</h5>
+                                                        <span class="counter">70</span>
+                                                        <h5>Artists Represented</h5>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <!--=================== counter end====================-->
-                                        
-                                        
+
+
                                     </div>
-                                    
+
                                 </div>
                             </div>
                         </div>

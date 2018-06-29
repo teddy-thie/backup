@@ -34,7 +34,7 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="./"><img src="images/logo.png" alt="Logo"></a>
+                <a class="navbar-brand" href="./"><img src="assets/img/logo.png" alt="Logo"></a>
                 <a class="navbar-brand hidden" href="./"><img src="images/logo2.png" alt="Logo"></a>
             </div>
             <div id="main-menu" class="main-menu collapse navbar-collapse">
@@ -48,6 +48,9 @@
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="fa fa-puzzle-piece"></i><a href="adminview.php">View Users</a></li>
                             <li><i class="fa fa-puzzle-piece"></i><a href="adminadd.php">Add Users</a></li>
+
+                            <li><i class="fa fa-puzzle-piece"></i><a href="artistview.php">View Artists</a></li>
+                            <li><i class="fa fa-puzzle-piece"></i><a href="artistadd.php">Add Artists</a></li>
                         </ul>
                     </li>
                     <h3 class="menu-title">GALLERY ACTIONS</h3><!-- /.menu-title -->
@@ -109,6 +112,7 @@
                                   <th scope="col">First Name</th>
                                   <th scope="col">Last Name</th>
                                   <th scope="col">Username</th>
+                                  <th scope="col">Email</th>
                                   <th scope="col">State</th>
                                   <th scope="col">Approval</th>
                                 </tr>
@@ -121,7 +125,7 @@ if (mysqli_connect_errno())
 {
 echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
-  $ViewQuery = "SELECT * FROM users WHERE state=0";
+  $ViewQuery = "SELECT * FROM users ORDER BY id ASC";
   $Excecute = mysqli_query($con,$ViewQuery);
 
   while ($DataRows=mysqli_fetch_array($Excecute, MYSQLI_ASSOC)) {
@@ -147,10 +151,10 @@ echo "Failed to connect to MySQL: " . mysqli_connect_error();
                         </div>
                     </div>
                 </div>
-            
 
 
-    
+
+
 
 
 

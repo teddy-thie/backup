@@ -11,7 +11,8 @@ if(isset($_POST["insert"]))
      if(mysqli_query($connect, $query))
      {
           echo '<script>alert("Image Inserted into Database")</script>';
-     }
+     }else {
+       echo("Error description: " . mysqli_error($connect));   }
 }
 ?>
 <!DOCTYPE html>
@@ -62,6 +63,7 @@ if(isset($_POST["insert"]))
                 <a href="#">
                     <img src="assets/img/logo.png" alt="cocoon">
                 </a>
+                <p>Banana Hill Art Gallery</p>
             </div>
             <!--logo end-->
 
@@ -105,6 +107,11 @@ if(isset($_POST["insert"]))
                         </a>
                     </li>
                     <li>
+                        <a href="shopping_cart.php">
+                            Shopping Cart
+                        </a>
+                    </li>
+                    <li>
                         <a href="help.php">
                             Help
                         </a>
@@ -118,7 +125,7 @@ if(isset($_POST["insert"]))
                 <div class="side_menu_bottom_inner">
                     <ul class="social_menu">
                         <li>
-                            <a href="https://plus.google.com/108819026650804640672/"> <i class="ion ion-social-google"></i> </a>
+                            <a href="https://plus.google.com/108819026650804640672/"> <i class="ion ion-social-pinterest"></i> </a>
                         </li>
                         <li>
                             <a href="https://www.facebook.com/BananaHillArtGalleryInNairobi"> <i class="ion ion-social-facebook"></i> </a>
@@ -127,11 +134,7 @@ if(isset($_POST["insert"]))
                             <a href="https://twitter.com/BananaHillArt"> <i class="ion ion-social-twitter"></i> </a>
                         </li>
                     </ul>
-                    <div class="copy_right">
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        <p class="copyright">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                    </div>
+
                 </div>
             </div>
             <!--social and copyright end -->
@@ -140,11 +143,10 @@ if(isset($_POST["insert"]))
         <!--=================== side menu end====================-->
 
         <!--=================== content body ====================-->
-        <div class="col-lg-10 col-md-9 col-12 body_block  align-content-center">
-            <div class="portfolio">
-                <div class="container-fluid">
-                <br>
-          <div class="container">
+        <div class="col-lg-10 body_block  align-content-center">
+          <h1>Browse and Buy Art Here</h1>
+          <p>_______</p>
+          <br>
           <?php
                 $query = "SELECT * FROM gallery ORDER BY id ASC";
                 $result = mysqli_query($connect, $query);
@@ -153,28 +155,30 @@ if(isset($_POST["insert"]))
                      while($row = mysqli_fetch_array($result))
                      {
                         ?>
-                <div class="col-md-4">
-                     <form method="post" action="shopping_cart.php?action=add&id=<?php echo $row["id"]; ?>">
-                          <div style="border:1px solid #333; background-color:#f1f1f1; border-radius:5px; padding:16px;" align="center">
-                               <?php echo'<img src="data:image/jpeg;base64,'.base64_encode($row["image"]).'" class="img-responsive" /> <br />';?>
-                               <h4 class="text-info"><?php echo $row["name"]; ?></h4>
+                     <form method="post" action="shopping_cart.php?action=add&id=<?php echo $row["id"]; ?>"  align-content-center>
+                          <div style="border:5px solid #333; background-color:white;  padding:5px;" align="center" >
+                        <table>
+                            <tr>
+
+                            <td>   <?php echo'<img src="data:image/jpeg;base64,'.base64_encode($row["image"]).'" width="250" height="250"/> ';?>
+                               <h3 class="text-info"><?php echo $row["name"]; ?></h3>
+                               <h4>by</h4>
                                <h4 class="text-info"><?php echo $row["artist"]; ?></h4>
                                <h4 class="text-danger">$ <?php echo $row["price"]; ?></h4>
                                <input type="number" name="quantity" class="form-control" value="1" min="1" max="<?php echo $row["quantity"]; ?>" />
                                <input type="hidden" name="hidden_name" value="<?php echo $row["name"]; ?>" />
                                <input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>" />
-                               <input type="submit" name="add_to_cart" style="margin-top:5px;" class="btn btn-success" value="Add to Cart" />
+                               <input type="submit" name="add_to_cart" style="margin-top:5px;" class="btn btn-success" value="Add to Cart" /><td></tr>
+
+                               </table>
+
                           </div>
                      </form>
-                </div>
                 <?php
                      }
                 }
                 ?>
-          </div>
 
-                </div>
-            </div>
         </div>
         <!--=================== content body end ====================-->
     </div>
